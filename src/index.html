@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Kaushal Gawri</title>
+    <!--Font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!--Scroll reveal CDN-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="style-new.css">
+    <script src="/jquery.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs"> </script>
+    <!-- <scipt>
+        $(function(){
+            $("#scholarship").load("demo.html");
+        });
+        
+    </scipt> -->
+</head>
+<body>
+<div class="scholarship" ng-cloak>
+    <form accept-charset="UTF-8" enctype="multipart/form-data" novalidate="" name="multiStepForm" class="form-validation steps" role="form">
+  
+      <div class="animate-switch-container" ng-switch on="stage" ng-class="{forward: direction, backward:!direction}">
+        <div class="col-sm-12 m-b-sm">
+          <div class="hero__content" img src="images/case.jpeg">
+            <h1 class='hero__title'>New Starter Guide</h1>
+          </div>
+        </div>
+        
+  
+        <ul class="progressbar">
+          <li class="step" ng-class="{true: 'step--active step--incomplete',false:'step--inactive step--complete'}[stage=='stage1']">
+            <span class="step__icon"></span>
+            <span class="step__label">Employee Type</span>
+          </li>
+          <li class="step" ng-class="{true: 'step--active step--incomplete',false:'step--inactive step--complete'}[stage=='stage2']">
+            <span class="step__icon"></span>
+            <span class="step__label">Employee Information</span>
+          </li>
+          <li class="step" ng-class="{true: 'step--active step--incomplete',false:'step--inactive step--complete'}[stage=='stage3']">
+            <span class="step__icon"></span>
+            <span class="step__label">Mobile Phone</span>
+          </li>
+          <li class="step " ng-class="{true: 'step--active step--incomplete',false:'step--inactive step--complete'}[stage=='stage4']">
+            <span class="step__icon"></span>
+            <span class="step__label">Laptop</span>
+          </li>
+          <li class="step" ng-class="{true: 'step--active step--incomplete',false:'step--inactive step--complete'}[stage=='stage5']">
+            <span class="step__icon"></span>
+            <span class="step__label">Additional Access</span>
+          </li>
+        </ul>
+  
+        <div class="animate-switch" ng-switch-when='stage1'>
+          <fieldset>
+            <h2 class="fs-title">Select type of employee onboarding</h2>
+            <h3 class="fs-subtitle"></h3>
+            
+            <div class="grid">
+             <button class="item1">
+                             <img src="images/permanent.jpeg" width="200" height="200">
+                 <h4>Permanent</h4>
+                 </button>
+              <button class="item2">
+                <img src="images/contractor.jpeg" width="200" height="200"/>
+                <h4>Contractor</h4>
+              </button>
+
+  
+            </div>
+            <input type="button" data-page="1" name="next" class="next action-button" value="Next" ng-click='next("stage2",$event)'/>
+          </fieldset>
+        </div>
+        <div class="animate-switch" ng-switch-when="stage2">
+          <fieldset class="wizard-fieldset ">
+            <h3 class="fs-title">Employee Information</h3>
+            <div class='d-flex'>
+            <div class="form-group">
+              <label for="ccode" class="wizard-form-text-label">T Number*</label>
+              <input type="text" class="form-control wizard-required" id="ccode">
+            </div>
+            <div class="form-group">
+              <label for="gname">First Name*</label>
+                <input type="text" class="form-control" id="fname">
+              </div>
+            </div>
+            <div class='d-flex'>
+            <div class="form-group">
+              <label for="gname">Last Name*</label>
+                <input type="text" class="form-control" id="lname">
+              </div>
+              <div class="form-group">
+              <label for="gname">Job Title*</label>
+                <input type="text" class="form-control" id="jobtitle">
+              </div>
+            </div>
+            <div class='d-flex'>
+            <div class="form-group">
+              <label for="ccode" class="wizard-form-text-label">Manager*</label>
+              <select id="manager" name="manager" class="form-control" aria-required="true">
+                  <option value="Miss">Abel Tutor</option>
+                  <option value="Ms">Abraham Lincoln</option>
+                  <option value="Mr">Adela Cervantsz</option>
+                  <option value="Mrs">Aileen Mottern</option>
+                  <option value="Dr">Angelique Schermerhorn</option>
+                </select>
+            </div>
+             <div class="form-group">
+                <label for="dob">Start Date*</label>
+                <input type="date" class="form-control">
+              </div>
+            </div>
+            <div class='d-flex'>
+            <div class="form-group">
+              <label for="ccode" class="wizard-form-text-label">Division*</label>
+              <input type="text" class="form-control" id="division">
+            </div>
+              <div class="form-group">
+              <label for="ccode" class="wizard-form-text-label">Location*</label>
+              <input type="text" class="form-control" id="location">
+            </div>
+            </div>
+            <input type="button" data-page="2" name="previous" class="previous action-button" value="Previous" ng-click='back("stage1",$event)'/>
+            <input type="button" data-page="2" name="next" class="next action-button" value="Next" ng-click='next("stage3",$event)'/>
+          </fieldset>
+        </div>
+        <div class="animate-switch" ng-switch-when="stage3">
+          <fieldset class="wizard-fieldset ">
+            <h3 class="fs-title">Select Phone and Accessories</h3>
+            <div class="img">
+              <img src="images/img.jpeg" width="400" height="400"/>
+          <h1 style:"" class="my my-heading">Apple iPhone 11 <br> 
+            <p class="specs"><br> 6.1-inch LCD display<br> 2GB RAM<br>64GB Storage<br>A13 Bionic Chip<br><br></p>
+              </h1>  
+                   
+          </div>
+           
+            <h2 class="fs-title">
+              Select Accessories
+            </h2>
+            <div class="grid-new">
+         <button class="accessory1">
+            <img src="images/case.jpeg" width="200" height="200"/>
+                      <p>Phone Case</p>
+              </button>
+            <button class="accessory1">
+             <img src="images/airpods.jpeg" width="200" height="200"/>
+                      <p>Airpods</p>
+              </button>
+                <button class="accessory1">
+            <img src="images/screen.jpeg" width="200" height="200"/>
+                      <p>Screen Protector</p>
+              </button>
+                 
+            </div>
+           
+            <input type="button" data-page="3" name="previous" ng-click="back('stage2',$event)" class="previous action-button" value="Previous"/>
+            <input type="button" data-page="3" name="next" ng-click="next('stage4',$event)" class="next action-button" value="Next"/>
+          </fieldset>
+        </div>
+        <div class="animate-switch" ng-switch-when="stage4">
+          <fieldset class="wizard-fieldset ">
+            <h3 class="fs-title">Select Laptop and Accessories</h3><br>
+             <div class="grid-laptop">
+             <button class="item3">
+               <p></p>
+                  <!--<a class="btn" style=font-size:2rem>Permanent</a>-->
+              <img src="images/mbp.jpeg" width="250" height="250"/>
+               <h4>
+                 Macbook Pro 15
+               </h4>
+               </button>
+            
+              <button class="item4">
+                          <p></p>
+                <img src="images/thinkpad.jpeg" width="250" height="250"/>
+                  <!--<a class="btn2" style=font-size:2rem>Contractor</a>-->
+                <h4>
+                  Lenovo Thinpad X1 Carbon
+                </h4>
+              </button>
+              <!-- <div><h3 style="padding-left: 8rem">Macbook</h3></div>
+               <div><h3 style="padding-left: 8rem">Lenovo</h3></div>
+                 -->
+            </div>
+              
+             <h2 class="fs-title">
+              Select Accessories
+            </h2>
+            <div class="grid-new">
+         <button class="accessory1">
+            <img src="images/sleeve.jpeg" width="200" height="200"/>
+                      <p>Laptop Sleeve</p>
+              </button>
+            <button class="accessory1">
+             <img src="images/camera.jpeg" width="200" height="200"/>
+                      <p>Camera</p>
+              </button>
+                <button class="accessory1">
+            <img src="images/mouse.jpeg" width="200" height="200"/>
+                      <p>Mouse</p>
+              </button>
+                 
+            </div>
+            
+            <input type="button" data-page="2" name="previous" ng-click="back('stage3',$event)" class="previous action-button" value="Previous"/>
+            <input type="button" data-page="2" name="next" ng-click="next('stage5',$event)" class="next action-button" value="Next"/>
+          </fieldset> 
+        </div>
+        <div class="animate-switch" ng-switch-when="stage5">
+          <fieldset class="wizard-fieldset">
+            <h3 class="fs-title">Additional Access</h3>
+            <div class="form-group">
+                <label for="email">Shared Mailbox Access (if required)</label>
+                <input type="email" class="form-control" id="email" ng-model="formParams.email">
+              </div>
+            <div class="form-group">
+                <label for="pname">Network Drive Access (if required)</label>
+                <input type="text" class="form-control" id="networkaccess" ng-model='formParams.pname'>
+              </div>
+             <div class="form-group">
+              <label for="selection_criteria" class="wizard-form-text-label">Please provide any additonal information to support your request</label>
+              <textarea class="form-control wizard-required" id="additional-info"></textarea>
+            </div>
+            <input type="button" data-page="5" name="previous" ng-click="back('stage4',$event)" class="previous action-button" value="Previous"/>
+            <input type="button" data-page="6" name="Submit" ng-click="next('success',$event)" class="submit action-button" value="Submit"/>
+          </fieldset>
+        </div>
+        <div class="animate-switch" ng-switch-when="success">
+          <fieldset>
+            <div class="success">
+              <h2 class="fs-title text-center">Success !</h2> <br><br>
+              <div class="row justify-content-center">
+                <svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+                  <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
+                  <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
+                  <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
+                </svg>
+              </div><br>
+              <div class="row justify-content-center">
+                <div class="col-7 text-center">
+                  <h5>New Starter Request successfully submitted</h5>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="animate-switch" ng-switch-when="error" >
+          <div class="error-wrap">
+            <h2 class="confirmation-text">Error</h2>
+            <p>There was an error when attempting to submit your request.<br>Please try again later.</p>
+            <p><strong>This will always error until a web service URL is set.</strong></p>
+            <div><button type="button" class="btn btn-danger" ng-click="reset()" >Try again</button></div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="onClickAction.js"></script>
+    </form>
+    
+  </div>
+<scipt src="angular_app.js"></scipt>
+  </body>
+  </html>
